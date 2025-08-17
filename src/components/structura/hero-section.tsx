@@ -25,7 +25,6 @@ export default function HeroSection() {
             </div>
             <div className="mt-8 text-center lg:text-left">
               <small className="text-muted-foreground">Based in Antwerp, Belgium. On-site & remote.</small>
-              <p className="text-sm text-muted-foreground mt-4">ChatGPT · Gemini · n8n · Power Automate · AppSheet · Make/Zapier · Google Workspace · Microsoft 365 · Stitch · Firebase · NotebookLM</p>
             </div>
           </div>
 
