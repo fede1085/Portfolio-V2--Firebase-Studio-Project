@@ -15,7 +15,11 @@ export default function ServicesSection() {
     {
       title: "Applications I'm fluent in",
       items: [
-        "ChatGPT, Gemini, DeepSeek · n8n, Make/Zapier · Power Automate/Power Apps, AppSheet · Google Stitch, Firebase, Figma, Vercel · NotebookLM",
+        "ChatGPT, Gemini, DeepSeek",
+        "n8n, Make/Zapier",
+        "Power Automate/Power Apps, AppSheet",
+        "Google Stitch, Firebase, Figma, Vercel",
+        "NotebookLM",
       ],
       icon: "💻"
     },

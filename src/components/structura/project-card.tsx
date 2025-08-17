@@ -14,7 +14,7 @@ type ProjectCardProps = {
 export default function ProjectCard({ title, tag, description, image, url, aiHint }: ProjectCardProps) {
   return (
     <div className="project-card group relative">
-        <div className="relative mb-[-40px]">
+        <div className="relative">
             <figure className="relative block h-[400px] w-full">
                 <Image
                     src={image}

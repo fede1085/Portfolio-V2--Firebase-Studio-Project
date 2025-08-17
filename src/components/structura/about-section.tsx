@@ -47,18 +47,18 @@ export default function AboutSection() {
             </div>
             <div className="grid grid-rows-2 gap-5">
                  <Image
-                    src="https://placehold.co/300x300.png"
+                    src="https://placehold.co/300x310.png"
                     alt="A workspace with a laptop"
                     width={300}
-                    height={300}
+                    height={310}
                     className="w-full h-full object-cover rounded-lg shadow-lg"
                     data-ai-hint="training session"
                 />
                  <Image
-                    src="https://placehold.co/300x300.png"
+                    src="https://placehold.co/300x310.png"
                     alt="Two people collaborating over a laptop"
                     width={300}
-                    height={300}
+                    height={310}
                     className="w-full h-full object-cover rounded-lg shadow-lg"
                     data-ai-hint="team collaboration"
                 />

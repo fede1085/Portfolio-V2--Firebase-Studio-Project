@@ -55,7 +55,6 @@ export default function Header() {
           <div className="header__brand">
             <Link href="/" className="text-2xl font-bold" onClick={closeMenu}>
               Federico Mosqueira
-              <small className="block text-sm font-normal text-muted-foreground">Business Technology Consultant</small>
             </Link>
           </div>
 
