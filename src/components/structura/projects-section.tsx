@@ -3,13 +3,7 @@ import Link from "next/link";
 import { projects as mockProjects } from "@/lib/data";
 import ProjectCard from "./project-card";
 import { Button } from "../ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { ArrowRight } from "lucide-react";
 
 export default function ProjectsSection() {
   const projects = mockProjects;
@@ -17,46 +11,37 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20 lg:py-32 bg-[#111111] text-white" aria-labelledby="projects-title">
       <div className="container mx-auto px-8">
-        <div className="flex justify-between items-center mb-12">
-            <div>
-                <p className="text-accent font-semibold mb-2">PROJECTS</p>
-                <h2 id="projects-title" className="text-3xl lg:text-4xl font-bold">
-                    I bring results. <br /> My clients are proof.
-                </h2>
-            </div>
-          <Button asChild variant="outline" size="lg" className="hidden md:inline-flex text-white border-white hover:bg-accent hover:text-white hover:border-accent font-bold">
-              <Link href="#">View all projects</Link>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+            <h2 id="projects-title" className="text-3xl lg:text-5xl font-bold leading-tight">
+                I bring results. <br /> My clients are proof.
+            </h2>
+          <Button asChild size="lg" className="mt-4 md:mt-0 bg-black text-white font-bold rounded-md px-6 py-4 text-base hover-gradient-border">
+              <Link href="#">
+                View all projects
+                <span className="gradient-underline"></span>
+              </Link>
           </Button>
         </div>
         
-        <Carousel 
-            opts={{ align: "start", loop: true }}
-            className="w-full"
-        >
-            <CarouselContent className="-ml-4">
-                {projects.map((project) => (
-                    <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                         <div className="py-12">
-                            <ProjectCard
-                                title={project.title}
-                                tag={project.tag}
-                                image={project.image}
-                                url={project.url}
-                                aiHint={project.aiHint}
-                            />
-                        </div>
-                    </CarouselItem>
-                ))}
-            </CarouselContent>
-             <div className="hidden md:flex absolute -top-4 right-0 items-center gap-2">
-                <CarouselPrevious variant="outline" size="icon" className="static text-white bg-transparent border-white hover:bg-accent hover:text-white hover:border-accent" />
-                <CarouselNext variant="outline" size="icon" className="static text-white bg-transparent border-white hover:bg-accent hover:text-white hover:border-accent" />
-            </div>
-        </Carousel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+                <ProjectCard
+                    key={project.id}
+                    title={project.title}
+                    tag={project.tag}
+                    image={project.image}
+                    url={project.url}
+                    aiHint={project.aiHint}
+                />
+            ))}
+        </div>
 
-        <div className="text-center mt-8 md:hidden">
-            <Button asChild variant="outline" size="lg" className="text-white border-white hover:bg-accent hover:text-white hover:border-primary font-bold">
-                <Link href="#">View all projects</Link>
+        <div className="text-center mt-12 md:hidden">
+            <Button asChild size="lg" className="bg-black text-white font-bold rounded-md px-6 py-4 text-base hover-gradient-border">
+                <Link href="#">
+                  View all projects
+                  <span className="gradient-underline"></span>
+                </Link>
             </Button>
         </div>
       </div>
