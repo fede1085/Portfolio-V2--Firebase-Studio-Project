@@ -17,18 +17,15 @@ export default function FaqSection() {
 
   const FaqColumn = ({ items }: { items: typeof mockFaqs }) => (
     <Accordion type="single" collapsible className="w-full flex flex-col">
-      {items.map((faq, index) => (
+      {items.map((faq) => (
         <AccordionItem 
           key={faq.id} 
           value={faq.id} 
-          className={`
-            border-b border-white/10 
-            ${index === 0 ? 'border-t' : ''}
-          `}
+          className="border-b border-white/10 last:border-b-0"
         >
-          <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline py-6 text-gray-100 hover:text-white">
+          <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline py-[26px] text-gray-100 hover:text-white">
             <span>{faq.question}</span>
-            <ChevronDown className="h-5 w-5 shrink-0 text-gray-400 transition-transform duration-200" />
+            {/* The default chevron is now part of the trigger, so no need to add another one here */}
           </AccordionTrigger>
           <AccordionContent className="text-base text-gray-400 pb-6 pr-8">
             {faq.answer}
