@@ -1,30 +1,3 @@
-import { Check } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-type ServiceCardProps = {
-  title: string;
-  items: string[];
-};
-
-function ServiceCard({ title, items }: ServiceCardProps) {
-  return (
-    <Card className="h-full shadow-sm rounded-xl p-8">
-      <CardHeader className="p-0 mb-4">
-        <CardTitle className="text-2xl font-bold">{title}</CardTitle>
-      </CardHeader>
-      <CardContent className="p-0">
-        <ul className="space-y-3 list-disc list-inside text-muted-foreground">
-          {items.map((item, index) => (
-            <li key={index}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </CardContent>
-    </Card>
-  );
-}
-
 export default function ServicesSection() {
   const services = [
     {
@@ -35,6 +8,7 @@ export default function ServicesSection() {
         "Interactive prototyping",
         "Design system creation",
       ],
+      icon: "🎨"
     },
     {
       title: "Applications I'm fluent in",
@@ -44,6 +18,7 @@ export default function ServicesSection() {
         "Adobe Creative Suite",
         "Webflow for no-code development",
       ],
+      icon: "💻"
     },
     {
       title: "What you can expect",
@@ -53,20 +28,32 @@ export default function ServicesSection() {
         "Clear and consistent communication",
         "Timely delivery of high-quality work",
       ],
+      icon: "✨"
     },
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-32 bg-[#F8F9FA]" aria-labelledby="services-title">
+    <section id="services" className="py-20 lg:py-32" aria-labelledby="services-title">
       <div className="container mx-auto px-8">
         <div className="text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-accent font-semibold mb-2">SERVICES</p>
           <h2 id="services-title" className="text-3xl lg:text-4xl font-bold mb-4">
             Design that solves problems, one product at a time.
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
           {services.map((service, index) => (
-            <ServiceCard key={index} title={service.title} items={service.items} />
+            <div key={index} className="flex flex-col items-center md:items-start">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+                {service.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>
+                    {item}
+                    </li>
+                ))}
+                </ul>
+            </div>
           ))}
         </div>
       </div>

@@ -1,49 +1,68 @@
 import { resume as mockResume } from "@/lib/data";
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap, ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 interface ResumeItemProps {
   title: string;
   subtitle: string;
   years: string;
+  icon: React.ReactNode;
 }
 
-function ResumeItem({ title, subtitle, years }: ResumeItemProps) {
+function ResumeItem({ title, subtitle, years, icon }: ResumeItemProps) {
   return (
-    <div className="resume-item">
-      <div className="flex flex-col sm:flex-row justify-between sm:items-center">
-        <h4 className="font-bold text-xl">{title}</h4>
-        <p className="text-sm text-muted-foreground sm:text-right">{years}</p>
-      </div>
-      <p className="text-muted-foreground">{subtitle}</p>
-    </div>
+    <Link href="#" className="resume-item group block">
+        <div className="flex gap-4">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                {icon}
+            </div>
+            <div className="flex-grow">
+                <div className="flex justify-between items-start">
+                    <div>
+                        <h4 className="font-bold text-xl">{title}</h4>
+                        <p className="text-muted-foreground">{subtitle}</p>
+                    </div>
+                    <ArrowUpRight className="w-5 h-5 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                </div>
+                 <p className="text-sm text-muted-foreground mt-1">{years}</p>
+            </div>
+        </div>
+    </Link>
   );
 }
 
 export default function ResumeSection() {
   const { education, work } = mockResume;
 
+  const educationIcons = [
+      <GraduationCap key="e1" className="w-6 h-6 text-primary" />,
+      <GraduationCap key="e2" className="w-6 h-6 text-primary" />,
+  ]
+  const workIcons = [
+      <Briefcase key="w1" className="w-6 h-6 text-primary" />,
+      <Briefcase key="w2" className="w-6 h-6 text-primary" />,
+      <Briefcase key="w3" className="w-6 h-6 text-primary" />,
+  ]
+
   return (
     <section id="resume" className="py-20 lg:py-32" aria-labelledby="resume-title">
       <div className="container mx-auto px-8">
-        <div className="text-center mb-12">
-            <h2 id="resume-title" className="text-3xl lg:text-4xl font-bold mb-4">
+        <div className="mb-12 max-w-2xl">
+             <p className="text-accent font-semibold mb-2">EXPERIENCE</p>
+            <h2 id="resume-title" className="text-3xl lg:text-4xl font-bold">
                 My Experience
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A summary of my professional journey and educational background.
-            </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
           <div>
-            <h3 className="flex items-center gap-3 text-2xl font-bold mb-6">
-              <GraduationCap className="w-6 h-6 text-primary" />
+            <h3 className="text-2xl font-bold mb-6">
               Education
             </h3>
             <div className="space-y-8">
               {education.map((item, index) => (
                 <div key={item.id}>
-                  <ResumeItem title={item.degree} subtitle={item.institution} years={item.years} />
+                  <ResumeItem title={item.institution} subtitle={item.degree} years={item.years} icon={educationIcons[index]} />
                    {index < education.length - 1 && <Separator className="mt-8" />}
                 </div>
               ))}
@@ -51,14 +70,13 @@ export default function ResumeSection() {
           </div>
           
           <div>
-            <h3 className="flex items-center gap-3 text-2xl font-bold mb-6">
-              <Briefcase className="w-6 h-6 text-primary" />
+            <h3 className="text-2xl font-bold mb-6">
               Work Experience
             </h3>
             <div className="space-y-8">
               {work.map((item, index) => (
                 <div key={item.id}>
-                  <ResumeItem title={item.role} subtitle={item.company} years={item.years} />
+                  <ResumeItem title={item.company} subtitle={item.role} years={item.years} icon={workIcons[index]} />
                   {index < work.length - 1 && <Separator className="mt-8" />}
                 </div>
               ))}

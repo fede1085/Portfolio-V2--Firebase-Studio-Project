@@ -58,26 +58,23 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav id="site-nav" aria-label="Primary" className="hidden lg:block">
+          <nav id="site-nav" aria-label="Primary" className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-8">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    className="text-lg font-medium text-foreground hover:text-accent transition-colors"
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-          </nav>
-
-          <div className="hidden lg:block">
-            <Button asChild size="lg" className="font-bold">
+             <Button asChild size="lg" className="ml-8 font-bold bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground">
               <Link href="#contact">Book a call</Link>
             </Button>
-          </div>
+          </nav>
 
           <div className="lg:hidden">
             <button
@@ -107,7 +104,7 @@ export default function Header() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-3xl font-semibold text-foreground hover:text-primary transition-colors"
+                  className="text-3xl font-semibold text-foreground hover:text-accent transition-colors"
                   onClick={closeMenu}
                 >
                   {link.name}
@@ -115,7 +112,7 @@ export default function Header() {
               </li>
             ))}
             <li className="mt-8">
-                <Button asChild size="lg" className="font-bold">
+                <Button asChild size="lg" className="font-bold bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground">
                     <Link href="#contact" onClick={closeMenu}>Book a call</Link>
                 </Button>
             </li>

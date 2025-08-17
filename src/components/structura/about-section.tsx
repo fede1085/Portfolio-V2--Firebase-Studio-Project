@@ -11,8 +11,9 @@ export default function AboutSection() {
   return (
     <section id="about-me" className="py-20 lg:py-32" aria-labelledby="about-me-title">
       <div className="container mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="about__content">
+            <p className="text-accent font-semibold mb-2">A BIT ABOUT ME</p>
             <h2 id="about-me-title" className="text-3xl lg:text-4xl font-bold mb-6">
               That's me!
             </h2>

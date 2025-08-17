@@ -5,22 +5,22 @@
 @layer base {
   :root {
     --background: 0 0% 100%; /* #FFFFFF */
-    --foreground: 0 0% 3.9%; /* #0A0A0A - close to #000000 */
+    --foreground: 0 0% 3.9%; /* #0A0A0A -> Black */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 229 84% 60%; /* #4361EE */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%; /* #F5F5F5 - close to #F8F9FA */
-    --secondary-foreground: 0 0% 9%;
+    --primary: 0 0% 3.9%; /* Black */
+    --primary-foreground: 0 0% 98%; /* White */
+    --secondary: 0 0% 40%; /* #666666 */
+    --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%; /* #737373 - close to #666666 */
-    --accent: 229 84% 60%;
+    --muted-foreground: 0 0% 40%; /* #666666 */
+    --accent: 229 84% 60%; /* #4361EE */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
+    --border: 0 0% 89.8%; /* #E5E5E5 */
     --input: 0 0% 89.8%;
     --ring: 229 84% 60%;
     --radius: 0.5rem;
@@ -33,17 +33,17 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 6.7%;
     --popover-foreground: 0 0% 98%;
-    --primary: 229 84% 60%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 14.9%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 3.9%;
+    --secondary: 0 0% 63.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 229 84% 60%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 3.9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
+    --border: 0 0% 20%; /* Darker border for dark mode */
     --input: 0 0% 14.9%;
     --ring: 229 84% 70%;
   }
@@ -55,5 +55,17 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-5xl md:text-6xl;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
   }
 }
