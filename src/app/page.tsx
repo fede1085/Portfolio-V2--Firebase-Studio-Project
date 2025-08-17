@@ -1,5 +1,6 @@
 import Header from '@/components/structura/header';
 import HeroSection from '@/components/structura/hero-section';
+import TrustedBySection from '@/components/structura/trusted-by-section';
 import ServicesSection from '@/components/structura/services-section';
 import ProjectsSection from '@/components/structura/projects-section';
 import BlogSection from '@/components/structura/blog-section';
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <TrustedBySection />
         <ServicesSection />
         <ProjectsSection />
         <BlogSection />
