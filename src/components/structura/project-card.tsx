@@ -12,9 +12,9 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ title, tag, image, url, aiHint }: ProjectCardProps) {
   return (
-    <div className="project-card group">
+    <div className="project-card group relative">
         <div className="relative mb-[-40px]">
-            <figure className="relative block h-[300px] w-full">
+            <figure className="relative block h-[400px] w-full">
                 <Image
                     src={image}
                     alt={`Screenshot of ${title}`}
