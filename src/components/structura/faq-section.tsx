@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Card, CardContent } from "../ui/card";
+import { ChevronDown } from "lucide-react";
 
 export default function FaqSection() {
   const faqs = mockFaqs;
@@ -15,40 +15,47 @@ export default function FaqSection() {
   const firstHalf = faqs.slice(0, midIndex);
   const secondHalf = faqs.slice(midIndex);
 
+  const FaqColumn = ({ items }: { items: typeof mockFaqs }) => (
+    <Accordion type="single" collapsible className="w-full flex flex-col">
+      {items.map((faq, index) => (
+        <AccordionItem 
+          key={faq.id} 
+          value={faq.id} 
+          className={`
+            border-b border-white/10 
+            ${index === 0 ? 'border-t' : ''}
+          `}
+        >
+          <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline py-6 text-gray-100 hover:text-white">
+            <span>{faq.question}</span>
+            <ChevronDown className="h-5 w-5 shrink-0 text-gray-400 transition-transform duration-200" />
+          </AccordionTrigger>
+          <AccordionContent className="text-base text-gray-400 pb-6 pr-8">
+            {faq.answer}
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  );
+
   return (
     <section id="faq" className="py-20 lg:py-32 bg-[#111111] text-white" aria-labelledby="faq-title">
       <div className="container mx-auto px-8 max-w-6xl">
-        <div className="mb-12">
-          <p className="text-accent font-semibold mb-2 text-center lg:text-left">FAQ</p>
-          <h2 id="faq-title" className="text-3xl lg:text-4xl font-bold text-center lg:text-left">
+        <div className="mb-16 text-center">
+            <p className="font-semibold text-sm uppercase tracking-[1.5px] mb-4" style={{
+                background: 'linear-gradient(90deg, #ff7a18, #af002d 70%, #319197)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+            }}>
+              FAQ
+            </p>
+          <h2 id="faq-title" className="text-4xl lg:text-5xl font-bold">
             Frequently asked questions
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              {firstHalf.map((faq) => (
-                <AccordionItem key={faq.id} value={faq.id} className="px-6 py-2 border border-gray-700 rounded-lg bg-gray-800/20">
-                  <AccordionTrigger className="text-left text-lg font-bold hover:no-underline py-4">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-base text-muted-foreground pb-4">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              {secondHalf.map((faq) => (
-                <AccordionItem key={faq.id} value={faq.id} className="px-6 py-2 border border-gray-700 rounded-lg bg-gray-800/20">
-                  <AccordionTrigger className="text-left text-lg font-bold hover:no-underline py-4">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-base text-muted-foreground pb-4">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-0">
+          <FaqColumn items={firstHalf} />
+          <FaqColumn items={secondHalf} />
         </div>
       </div>
     </section>
