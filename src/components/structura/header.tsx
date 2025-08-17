@@ -46,14 +46,14 @@ export default function Header() {
       id="site-header"
       role="banner"
       className={cn(
-        "header fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled || isOpen ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
+        "header fixed top-0 left-0 right-0 z-50 transition-shadow duration-300",
+        isScrolled || isOpen ? "bg-background shadow-md" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-8">
+        <div className="flex items-center justify-between h-24">
           <div className="header__brand">
-            <Link href="/" className="text-2xl font-bold font-headline" onClick={closeMenu}>
+            <Link href="/" className="text-2xl font-bold" onClick={closeMenu}>
               Structura
             </Link>
           </div>
@@ -64,7 +64,7 @@ export default function Header() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-lg font-medium text-foreground/80 hover:text-primary transition-colors"
+                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -74,7 +74,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button asChild>
+            <Button asChild size="lg" className="font-bold">
               <Link href="#contact">Book a call</Link>
             </Button>
           </div>
@@ -94,11 +94,10 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         id="mobile-nav"
         className={cn(
-          "lg:hidden absolute top-20 left-0 right-0 h-[calc(100vh-5rem)] bg-background/95 backdrop-blur-xl transition-transform duration-300 ease-in-out",
+          "lg:hidden absolute top-24 left-0 right-0 h-[calc(100vh-6rem)] bg-background/95 backdrop-blur-xl transition-transform duration-300 ease-in-out",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -116,7 +115,7 @@ export default function Header() {
               </li>
             ))}
             <li className="mt-8">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="font-bold">
                     <Link href="#contact" onClick={closeMenu}>Book a call</Link>
                 </Button>
             </li>

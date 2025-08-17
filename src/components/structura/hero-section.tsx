@@ -12,25 +12,25 @@ export default function HeroSection() {
   ];
 
   return (
-    <section id="hero" className="hero-section bg-background">
-      <div className="container mx-auto px-4 min-h-screen flex items-center pt-20">
+    <section id="hero" className="bg-background">
+      <div className="container mx-auto px-8 min-h-screen flex items-center pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="hero__content text-center lg:text-left">
-            <h1 className="hero__title text-4xl lg:text-6xl font-extrabold mb-6 leading-tight font-headline">
+          <div className="hero__content text-center lg:text-left lg:w-[55%]">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               I design products that delight and inspire people.
             </h1>
-            <p className="hero__subtitle text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Hi, I'm a Product Designer based in Creativity City. I create user-friendly interfaces for fast-growing startups.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="font-bold">
                 <Link href="#contact">Book a call</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="font-bold">
                 <Link href="/resume.pdf" download>Download CV</Link>
               </Button>
             </div>
-            <div className="mt-12">
+            <div className="mt-8">
               <p className="text-sm text-muted-foreground mb-4">Trusted by:</p>
               <div className="flex flex-wrap gap-x-8 gap-y-4 items-center justify-center lg:justify-start">
                 {trustedByLogos.map((logo) => (
@@ -40,7 +40,7 @@ export default function HeroSection() {
                     alt={logo.name}
                     width={100}
                     height={40}
-                    className="opacity-50 hover:opacity-100 transition-opacity"
+                    className="opacity-50 hover:opacity-100 transition-opacity filter grayscale"
                     data-ai-hint={logo.aiHint}
                   />
                 ))}
@@ -48,14 +48,14 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="hero__image-wrapper flex justify-center">
+          <div className="hero__image-wrapper flex justify-center lg:w-[45%] lg:justify-end">
             <figure className="relative">
               <Image
-                src="https://placehold.co/500x600.png"
+                src="https://placehold.co/400x400.png"
                 alt="Portrait of the designer"
-                width={500}
-                height={600}
-                className="rounded-lg shadow-2xl"
+                width={400}
+                height={400}
+                className="rounded-full shadow-2xl object-cover"
                 priority
                 data-ai-hint="designer portrait"
               />

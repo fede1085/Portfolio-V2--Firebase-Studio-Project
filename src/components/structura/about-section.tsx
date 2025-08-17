@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
 
 export default function AboutSection() {
   const images = [
@@ -10,11 +9,11 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about-me" className="about-section py-20 lg:py-32" aria-labelledby="about-me-title">
-      <div className="container mx-auto px-4">
+    <section id="about-me" className="py-20 lg:py-32" aria-labelledby="about-me-title">
+      <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="about__content">
-            <h2 id="about-me-title" className="text-3xl lg:text-4xl font-bold mb-6 font-headline">
+            <h2 id="about-me-title" className="text-3xl lg:text-4xl font-bold mb-6">
               That's me!
             </h2>
             <p className="text-lg text-muted-foreground mb-4">
@@ -27,21 +26,19 @@ export default function AboutSection() {
           <div className="about__gallery">
             <div className="grid grid-cols-2 gap-4">
               {images.map((image, index) => (
-                <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <CardContent className="p-0">
+                <div key={index} className="overflow-hidden rounded-lg shadow-md">
                     <figure>
                       <Image
                         src={image.src}
                         alt={image.alt}
                         width={400}
                         height={400}
-                        className="w-full h-auto object-cover aspect-square"
+                        className="w-full h-auto object-cover aspect-square transition-transform duration-300 hover:scale-105"
                         data-ai-hint={image.aiHint}
                       />
                        <figcaption className="sr-only">{image.alt}</figcaption>
                     </figure>
-                  </CardContent>
-                </Card>
+                </div>
               ))}
             </div>
           </div>
