@@ -3,30 +3,29 @@ export default function ServicesSection() {
     {
       title: "What I can do for you",
       items: [
-        "Branding and identity design",
-        "UI/UX design for web and mobile",
-        "Interactive prototyping",
-        "Design system creation",
+        "Map repetitive processes and prioritize quick-win automations",
+        "Ship a working MVP in 7 days (flow or micro-app)",
+        "Build copilots & prompt systems for sales, HR, support",
+        "Connect Microsoft 365/Google Workspace with CRMs/ERPs",
+        "Light compliance & governance; auditable automations",
+        "Train your team to maintain and extend what we build",
       ],
       icon: "🎨"
     },
     {
       title: "Applications I'm fluent in",
       items: [
-        "Figma for collaborative design",
-        "Sketch for UI and vector work",
-        "Adobe Creative Suite",
-        "Webflow for no-code development",
+        "ChatGPT, Gemini, DeepSeek · n8n, Make/Zapier · Power Automate/Power Apps, AppSheet · Google Stitch, Firebase, Figma, Vercel · NotebookLM",
       ],
       icon: "💻"
     },
     {
       title: "What you can expect",
       items: [
-        "Pixel-perfect, clean designs",
-        "User-centered design approach",
-        "Clear and consistent communication",
-        "Timely delivery of high-quality work",
+        "Visible results in 7–14 days",
+        "≥30% time saved on repetitive tasks (goal)",
+        "Clear handover & enablement so you’re not dependent on me",
+        "KPIs and iteration cadence (monthly or sprint-based)",
       ],
       icon: "✨"
     },

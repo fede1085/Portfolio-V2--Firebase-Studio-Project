@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function ProjectsSection() {
   const projects = mockProjects;
@@ -22,7 +23,7 @@ export default function ProjectsSection() {
                 I bring results. <br /> My clients are proof.
             </h2>
           <Button asChild size="lg" className="mt-4 md:mt-0 bg-black text-white font-bold rounded-md px-6 py-4 text-base hover-gradient-border">
-              <Link href="#">
+              <Link href="#projects">
                 View all projects
                 <span className="gradient-underline"></span>
               </Link>
@@ -32,6 +33,12 @@ export default function ProjectsSection() {
         
       <div className="pl-8 lg:pl-0 lg:container lg:mx-auto lg:px-8 relative">
         <Carousel
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: true,
+              }),
+            ]}
             opts={{
               align: "start",
               loop: true,
@@ -39,11 +46,12 @@ export default function ProjectsSection() {
             className="w-full"
         >
             <CarouselContent className="-ml-4">
-            {projects.map((project) => (
+            {projects.slice(0, 3).map((project) => (
                 <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                     <ProjectCard
                         title={project.title}
                         tag={project.tag}
+                        description={project.description}
                         image={project.image}
                         url={project.url}
                         aiHint={project.aiHint}

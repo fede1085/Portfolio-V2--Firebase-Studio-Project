@@ -27,10 +27,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="footer-brand md:col-span-5">
             <Link href="/" className="text-2xl font-bold mb-4 block">
-              Structura
+              Federico Mosqueira
             </Link>
-             <p className="text-gray-400 mb-2">123 Design Lane, Creativity City, 12345</p>
-             <a href="mailto:hello@structura.com" className="text-gray-400 hover:text-white transition-colors">hello@structura.com</a>
+             <p className="text-gray-400 mb-2">Antwerp, Belgium</p>
+             <a href="mailto:hello@federicomosqueira.com" className="text-gray-400 hover:text-white transition-colors">hello@federicomosqueira.com</a>
           </div>
 
           <nav className="footer-nav md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -57,7 +57,7 @@ export default function Footer() {
             </div>
             <div className="text-center text-sm text-gray-500">
                 <p>
-                    &copy; {new Date().getFullYear()} Structura. All rights reserved. Powered by Webflow.
+                    &copy; {new Date().getFullYear()} Federico Mosqueira. All rights reserved.
                 </p>
             </div>
         </div>

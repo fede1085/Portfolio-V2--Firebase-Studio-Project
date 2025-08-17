@@ -10,18 +10,22 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="hero__content text-center lg:text-left">
              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              I design products <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">that delight</span> and inspire people.
+              Business Technology Consultant — AI, Automation & Low-Code
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Hi, I'm a Product Designer based in Creativity City. I create user-friendly interfaces for fast-growing startups.
+              I help non-technical teams turn manual work into simple, reliable workflows — fast.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="font-bold bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground">
-                <Link href="#contact">Book a call</Link>
+                <Link href="#contact">Book a Call</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="font-bold border-primary/50 text-primary hover:bg-accent hover:text-accent-foreground hover:border-accent">
-                <Link href="/resume.pdf" download>Download CV</Link>
+                <Link href="/cv/Federico-Mosqueira.pdf" download>Download CV</Link>
               </Button>
+            </div>
+            <div className="mt-8 text-center lg:text-left">
+              <small className="text-muted-foreground">Based in Antwerp, Belgium. On-site & remote.</small>
+              <p className="text-sm text-muted-foreground mt-4">ChatGPT · Gemini · n8n · Power Automate · AppSheet · Make/Zapier · Google Workspace · Microsoft 365 · Stitch · Firebase · NotebookLM</p>
             </div>
           </div>
 
@@ -29,7 +33,7 @@ export default function HeroSection() {
             <figure className="relative">
               <Image
                 src="https://placehold.co/400x400.png"
-                alt="Portrait of the designer"
+                alt="Federico Mosqueira portrait"
                 width={400}
                 height={400}
                 className="rounded-full shadow-2xl object-cover"

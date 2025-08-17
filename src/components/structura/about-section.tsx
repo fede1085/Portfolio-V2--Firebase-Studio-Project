@@ -11,7 +11,7 @@ export default function AboutSection() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
             }}>
-              Product Designer
+              Business Technology Consultant
             </p>
             <h2 id="about-me-title" className="text-4xl md:text-5xl font-bold" style={{lineHeight: 1.2}}>
               That's me!
@@ -19,7 +19,7 @@ export default function AboutSection() {
           </div>
           <div className="about__content-right">
             <p className="text-lg text-[#444] max-w-[520px]" style={{lineHeight: 1.6}}>
-              Over the past 12 years, I've worked with a diverse range of clients, from startups to Fortune 500 companies. I love crafting interfaces that delight users and help businesses grow.
+              I’m a hybrid consultant who translates everyday work into AI-powered, low-code workflows. I don’t build heavy software; I connect what you already pay for and make it work together. I implement, connect, train, and stay long enough to ensure your team is confident. Based in Antwerp; Spanish/English; working across Belgium and remote.
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function AboutSection() {
                     width={300}
                     height={620}
                     className="w-full h-full object-cover rounded-lg shadow-lg"
-                    data-ai-hint="mobile wallet app"
+                    data-ai-hint="building automations"
                 />
             </div>
              <div className="flex flex-col gap-5 row-span-2">
@@ -42,7 +42,7 @@ export default function AboutSection() {
                     width={600}
                     height={620}
                     className="w-full h-full object-cover rounded-lg shadow-lg"
-                    data-ai-hint="designer workspace"
+                    data-ai-hint="workspace setup"
                 />
             </div>
             <div className="grid grid-rows-2 gap-5">
@@ -52,7 +52,7 @@ export default function AboutSection() {
                     width={300}
                     height={300}
                     className="w-full h-full object-cover rounded-lg shadow-lg"
-                    data-ai-hint="laptop workspace"
+                    data-ai-hint="training session"
                 />
                  <Image
                     src="https://placehold.co/300x300.png"
@@ -69,7 +69,7 @@ export default function AboutSection() {
         <div className="grid lg:hidden grid-cols-1 md:grid-cols-2 gap-5">
             <Image
                 src="https://placehold.co/300x620.png"
-                alt="A tall phone screen showing a wallet app"
+                alt="building automations"
                 width={300}
                 height={620}
                 className="w-full h-auto object-cover rounded-lg shadow-lg"
@@ -77,7 +77,7 @@ export default function AboutSection() {
             />
             <Image
                 src="https://placehold.co/600x620.png"
-                alt="A designer working at a dual monitor setup"
+                alt="workspace setup"
                 width={600}
                 height={620}
                 className="w-full h-auto object-cover rounded-lg shadow-lg"
@@ -85,7 +85,7 @@ export default function AboutSection() {
             />
             <Image
                 src="https://placehold.co/300x300.png"
-                alt="A workspace with a laptop"
+                alt="training session"
                 width={300}
                 height={300}
                 className="w-full h-auto object-cover rounded-lg shadow-lg"
@@ -93,7 +93,7 @@ export default function AboutSection() {
             />
             <Image
                 src="https://placehold.co/300x300.png"
-                alt="Two people collaborating over a laptop"
+                alt="team collaboration"
                 width={300}
                 height={300}
                 className="w-full h-auto object-cover rounded-lg shadow-lg"
