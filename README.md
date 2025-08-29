@@ -86,3 +86,6 @@ The project is set up with stubs for Firestore integration. To connect to a real
       );
     }
     ```
+
+---
+*Last update pushed by Gemini to verify the connection.*
