@@ -9,7 +9,7 @@ export default function FooterCta() {
         <h2 className="text-4xl lg:text-6xl font-bold mb-8">
           Let's get on a call.
         </h2>
-        <Button asChild size="lg" className="font-bold bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground rounded-full px-10 py-7 text-lg">
+        <Button asChild size="lg" variant="cta" className="rounded-full px-10 py-7 text-lg">
           <Link href="mailto:hello@structura.com">Book a call</Link>
         </Button>
       </div>
