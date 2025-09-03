@@ -16,7 +16,7 @@ export default function HeroSection() {
               I help non-technical teams turn manual work into simple, reliable workflows — fast.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button asChild size="lg" className="font-bold bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground">
+              <Button asChild size="lg" variant="cta">
                 <Link href="#contact">Book a Call</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="font-bold border-primary/50 text-primary hover:bg-accent hover:text-accent-foreground hover:border-accent">

@@ -71,7 +71,7 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-             <Button asChild size="lg" className="ml-8 font-bold bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground">
+            <Button asChild size="lg" variant="cta" className="ml-8">
               <Link href="#contact">Book a call</Link>
             </Button>
           </nav>
@@ -112,7 +112,7 @@ export default function Header() {
               </li>
             ))}
             <li className="mt-8">
-                <Button asChild size="lg" className="font-bold bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground">
+                <Button asChild size="lg" variant="cta">
                     <Link href="#contact" onClick={closeMenu}>Book a call</Link>
                 </Button>
             </li>
