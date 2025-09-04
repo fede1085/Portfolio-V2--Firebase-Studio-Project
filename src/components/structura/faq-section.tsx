@@ -1,21 +1,26 @@
 "use client";
 
-import { faqs as mockFaqs } from "@/lib/data";
+import { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronDown } from "lucide-react";
+import { getFaqs } from "@/lib/data";
+import type { FAQ } from "@/lib/types";
 
 export default function FaqSection() {
-  const faqs = mockFaqs;
+  const [faqs, setFaqs] = useState<FAQ[]>([]);
   const midIndex = Math.ceil(faqs.length / 2);
   const firstHalf = faqs.slice(0, midIndex);
   const secondHalf = faqs.slice(midIndex);
 
-  const FaqColumn = ({ items }: { items: typeof mockFaqs }) => (
+  useEffect(() => {
+    getFaqs().then(setFaqs).catch(console.error);
+  }, []);
+
+  const FaqColumn = ({ items }: { items: FAQ[] }) => (
     <Accordion type="single" collapsible className="w-full flex flex-col">
       {items.map((faq) => (
         <AccordionItem 

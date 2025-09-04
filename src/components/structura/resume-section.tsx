@@ -1,7 +1,10 @@
-import { resume as mockResume } from "@/lib/data";
+"use client";
+import { useEffect, useState } from "react";
 import { Briefcase, GraduationCap, ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { getResume } from "@/lib/data";
+import type { Resume } from "@/lib/types";
 
 interface ResumeItemProps {
   title: string;
@@ -33,7 +36,12 @@ function ResumeItem({ title, subtitle, years, icon }: ResumeItemProps) {
 }
 
 export default function ResumeSection() {
-  const { education, work } = mockResume;
+  const [resume, setResume] = useState<Resume>({ education: [], work: [] });
+  const { education, work } = resume;
+
+  useEffect(() => {
+    getResume().then(setResume).catch(console.error);
+  }, []);
 
   const educationIcons = [
       <GraduationCap key="e1" className="w-6 h-6 text-primary" />,
