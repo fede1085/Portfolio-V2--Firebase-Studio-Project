@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const tools = [
   'ChatGPT', 'Gemini', 'n8n', 'Zapier', 'Make', 'Google Stitch', 
   'Firebase', 'Microsoft 365', 'Google Workspace', 'AppSheet', 
