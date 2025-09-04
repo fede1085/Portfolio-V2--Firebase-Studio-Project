@@ -2,6 +2,7 @@ import { resume as mockResume } from "@/lib/data";
 import { Briefcase, GraduationCap, ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { SectionLabel } from "@/components/ui/section-label";
 
 interface ResumeItemProps {
   title: string;
@@ -49,7 +50,7 @@ export default function ResumeSection() {
     <section id="resume" className="py-20 lg:py-32" aria-labelledby="resume-title">
       <div className="container mx-auto px-8">
         <div className="mb-12 max-w-2xl">
-             <p className="text-accent font-semibold mb-2">EXPERIENCE</p>
+             <SectionLabel>EXPERIENCE</SectionLabel>
             <h2 id="resume-title" className="text-3xl lg:text-4xl font-bold">
                 My Experience
             </h2>

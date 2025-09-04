@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { SectionLabel } from "@/components/ui/section-label";
 
 export default function TestimonialSection() {
   const testimonials = mockTestimonials;
@@ -17,7 +18,7 @@ export default function TestimonialSection() {
     <section id="testimonial" className="py-20 lg:py-32" aria-labelledby="testimonial-title">
       <div className="container mx-auto px-8">
         <div className="mb-12 max-w-2xl">
-            <p className="text-accent font-semibold mb-2">TESTIMONIALS</p>
+            <SectionLabel>TESTIMONIALS</SectionLabel>
             <h2 id="testimonial-title" className="text-3xl lg:text-4xl font-bold">
                 Word on the street
             </h2>
