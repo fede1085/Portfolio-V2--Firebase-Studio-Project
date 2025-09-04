@@ -99,3 +99,10 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 }
+
+@layer utilities {
+  .gradient-headline {
+    @apply text-transparent bg-clip-text;
+    background: linear-gradient(90deg, #ff7a18, #af002d 70%, #319197);
+  }
+}

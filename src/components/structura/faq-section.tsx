@@ -39,11 +39,7 @@ export default function FaqSection() {
     <section id="faq" className="py-20 lg:py-32 bg-[#111111] text-white" aria-labelledby="faq-title">
       <div className="container mx-auto px-8 max-w-6xl">
         <div className="mb-16 text-center">
-            <p className="font-semibold text-sm uppercase tracking-[1.5px] mb-4" style={{
-                background: 'linear-gradient(90deg, #ff7a18, #af002d 70%, #319197)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-            }}>
+            <p className="font-semibold text-sm uppercase tracking-[1.5px] mb-4 gradient-headline">
               FAQ
             </p>
           <h2 id="faq-title" className="text-4xl lg:text-5xl font-bold">

@@ -6,11 +6,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="about__content-left">
-            <p className="font-semibold text-sm uppercase tracking-[1.5px] mb-4" style={{
-                background: 'linear-gradient(90deg, #ff7a18, #af002d 70%, #319197)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-            }}>
+            <p className="font-semibold text-sm uppercase tracking-[1.5px] mb-4 gradient-headline">
               Business Technology Consultant
             </p>
             <h2 id="about-me-title" className="text-4xl md:text-5xl font-bold" style={{lineHeight: 1.2}}>
