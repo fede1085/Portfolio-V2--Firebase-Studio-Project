@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Dribbble, Instagram, Twitter } from "lucide-react";
+import { navLinks } from "@/lib/data";
 
 export default function Footer() {
   const socialLinks = [
@@ -8,19 +9,6 @@ export default function Footer() {
     { name: "Twitter", href: "#", icon: Twitter },
   ];
   
-  const navLinks = [
-      { name: "About", href: "#about-me" },
-      { name: "Services", href: "#services" },
-      { name: "Projects", href: "#projects" },
-      { name: "Blog", href: "#blog" },
-      { name: "Experience", href: "#resume" },
-      { name: "Contact", href: "#contact" },
-      { name: "Image License Info", href: "#" },
-      { name: "Instructions", href: "#" },
-      { name: "Changelog", href: "#" },
-      { name: "Style Guide", href: "#" },
-  ];
-
   return (
     <footer id="site-footer" className="bg-black text-white">
       <div className="container mx-auto px-8 py-20">
