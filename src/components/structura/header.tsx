@@ -5,17 +5,11 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { navLinks } from "@/lib/data";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const navLinks = [
-    { name: "About", href: "#about-me" },
-    { name: "Services", href: "#services" },
-    { name: "Projects", href: "#projects" },
-    { name: "Blog", href: "#blog" },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {

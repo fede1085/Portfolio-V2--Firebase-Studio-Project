@@ -1,5 +1,18 @@
 // TODO: This is mock data. Replace with data from a CMS or Firestore.
 
+export const navLinks = [
+  { name: "About", href: "#about-me" },
+  { name: "Services", href: "#services" },
+  { name: "Projects", href: "#projects" },
+  { name: "Blog", href: "#blog" },
+  { name: "Experience", href: "#resume" },
+  { name: "Contact", href: "#contact" },
+  { name: "Image License Info", href: "#" },
+  { name: "Instructions", href: "#" },
+  { name: "Changelog", href: "#" },
+  { name: "Style Guide", href: "#" },
+];
+
 export const projects = [
   { id: "p1", title: "Sales Inbox Triage Copilot", tag: "AI Copilot", description: "n8n + OpenAI · routes emails, drafts replies, updates CRM", image: "https://placehold.co/600x450.png", url: "#", aiHint: "abstract design" },
   { id: "p2", title: "HR Assistant for New Hires", tag: "Onboarding", description: "AppSheet/Power Apps · collects docs, answers policy FAQs", image: "https://placehold.co/600x450.png", url: "#", aiHint: "modern website" },
