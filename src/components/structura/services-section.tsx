@@ -1,3 +1,5 @@
+import { SectionLabel } from "@/components/ui/section-label";
+
 export default function ServicesSection() {
   const services = [
     {
@@ -39,7 +41,7 @@ export default function ServicesSection() {
     <section id="services" className="py-20 lg:py-32" aria-labelledby="services-title">
       <div className="container mx-auto px-8">
         <div className="text-center mb-12 max-w-3xl mx-auto">
-            <p className="text-accent font-semibold mb-2">SERVICES</p>
+            <SectionLabel>SERVICES</SectionLabel>
           <h2 id="services-title" className="text-3xl lg:text-4xl font-bold mb-4">
             Design that solves problems, one product at a time.
           </h2>

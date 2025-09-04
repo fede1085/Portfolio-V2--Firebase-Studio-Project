@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import { posts as mockPosts } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight } from "lucide-react";
+import { SectionLabel } from "@/components/ui/section-label";
 
 export default function BlogSection() {
   const posts = mockPosts;
@@ -12,7 +13,7 @@ export default function BlogSection() {
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="blog__header lg:col-span-4 lg:sticky top-24 self-start">
-            <p className="text-accent font-semibold mb-2">BLOG</p>
+            <SectionLabel>BLOG</SectionLabel>
             <h2 id="blog-title" className="text-3xl lg:text-4xl font-bold mb-4">
               Latest Blogs
             </h2>
