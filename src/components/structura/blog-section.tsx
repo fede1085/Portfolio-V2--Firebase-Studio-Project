@@ -1,11 +1,18 @@
+"use client";
 import Link from "next/link";
 import { format } from "date-fns";
-import { posts as mockPosts } from "@/lib/data";
+import { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight } from "lucide-react";
+import { getPosts } from "@/lib/data";
+import type { Post } from "@/lib/types";
 
 export default function BlogSection() {
-  const posts = mockPosts;
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    getPosts().then(setPosts).catch(console.error);
+  }, []);
 
   return (
     <section id="blog" className="py-20 lg:py-32 bg-[#111111] text-white" aria-labelledby="blog-title">

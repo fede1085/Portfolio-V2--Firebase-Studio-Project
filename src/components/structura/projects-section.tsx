@@ -1,8 +1,10 @@
 "use client"
 import Link from "next/link";
-import { projects as mockProjects } from "@/lib/data";
+import { useEffect, useState } from "react";
 import ProjectCard from "./project-card";
 import { Button } from "../ui/button";
+import { getProjects } from "@/lib/data";
+import type { Project } from "@/lib/types";
 import {
   Carousel,
   CarouselContent,
@@ -13,7 +15,11 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 export default function ProjectsSection() {
-  const projects = mockProjects;
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    getProjects().then(setProjects).catch(console.error);
+  }, []);
 
   return (
     <section id="projects" className="py-20 lg:py-32 bg-background relative z-10" aria-labelledby="projects-title">

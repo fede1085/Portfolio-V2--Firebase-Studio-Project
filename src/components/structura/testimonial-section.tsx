@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { testimonials as mockTestimonials } from "@/lib/data";
+import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -9,9 +9,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { getTestimonials } from "@/lib/data";
+import type { Testimonial } from "@/lib/types";
 
 export default function TestimonialSection() {
-  const testimonials = mockTestimonials;
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+
+  useEffect(() => {
+    getTestimonials().then(setTestimonials).catch(console.error);
+  }, []);
 
   return (
     <section id="testimonial" className="py-20 lg:py-32" aria-labelledby="testimonial-title">
