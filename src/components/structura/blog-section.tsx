@@ -3,13 +3,15 @@ import { format } from "date-fns";
 import { posts as mockPosts } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight } from "lucide-react";
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
 
 export default function BlogSection() {
   const posts = mockPosts;
 
   return (
-    <section id="blog" className="py-20 lg:py-32 bg-[#111111] text-white" aria-labelledby="blog-title">
-      <div className="container mx-auto px-8">
+    <Section id="blog" className="bg-[#111111] text-white" aria-labelledby="blog-title">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="blog__header lg:col-span-4 lg:sticky top-24 self-start">
             <p className="text-accent font-semibold mb-2">BLOG</p>
@@ -44,7 +46,7 @@ export default function BlogSection() {
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

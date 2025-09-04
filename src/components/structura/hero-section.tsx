@@ -2,11 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="bg-background pt-24">
-      <div className="container mx-auto px-8 min-h-[calc(100vh-6rem)] flex flex-col justify-center">
+    <Section id="hero" className="bg-background pt-24">
+      <Container className="min-h-[calc(100vh-6rem)] flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="hero__content text-center lg:text-left">
              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -43,7 +45,7 @@ export default function HeroSection() {
             </figure>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

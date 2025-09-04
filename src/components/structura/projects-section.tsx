@@ -11,13 +11,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
 
 export default function ProjectsSection() {
   const projects = mockProjects;
 
   return (
-    <section id="projects" className="py-20 lg:py-32 bg-background relative z-10" aria-labelledby="projects-title">
-      <div className="container mx-auto px-8">
+    <Section id="projects" className="bg-background relative z-10" aria-labelledby="projects-title">
+      <Container>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
             <h2 id="projects-title" className="text-3xl lg:text-5xl font-bold leading-tight text-primary">
                 I bring results. <br /> My clients are proof.
@@ -29,9 +31,9 @@ export default function ProjectsSection() {
               </Link>
           </Button>
         </div>
-      </div>
-        
-      <div className="pl-8 lg:pl-0 lg:container lg:mx-auto lg:px-8 relative">
+      </Container>
+
+      <Container className="relative pl-8 lg:pl-0">
         <Carousel
             plugins={[
               Autoplay({
@@ -59,12 +61,12 @@ export default function ProjectsSection() {
                 </CarouselItem>
             ))}
             </CarouselContent>
-            <div className="flex items-center gap-2 mt-8 justify-start lg:container lg:mx-auto lg:px-8">
+            <div className="flex items-center gap-2 mt-8 justify-start">
                 <CarouselPrevious className="static w-10 h-10 rounded-none bg-white border-black text-black hover:bg-gray-200" />
                 <CarouselNext className="static w-10 h-10 rounded-none bg-white border-black text-black hover:bg-gray-200" />
             </div>
         </Carousel>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

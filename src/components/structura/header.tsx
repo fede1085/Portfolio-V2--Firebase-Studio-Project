@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Container } from "@/components/ui/container";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +51,7 @@ export default function Header() {
         isScrolled || isOpen ? "bg-background shadow-md" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-8">
+      <Container>
         <div className="flex items-center justify-between h-24">
           <div className="header__brand">
             <Link href="/" className="text-2xl font-bold" onClick={closeMenu}>
@@ -89,7 +90,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-      </div>
+      </Container>
 
       <div
         id="mobile-nav"

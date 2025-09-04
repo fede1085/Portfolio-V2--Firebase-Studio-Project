@@ -8,6 +8,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ChevronDown } from "lucide-react";
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
 
 export default function FaqSection() {
   const faqs = mockFaqs;
@@ -36,8 +38,8 @@ export default function FaqSection() {
   );
 
   return (
-    <section id="faq" className="py-20 lg:py-32 bg-[#111111] text-white" aria-labelledby="faq-title">
-      <div className="container mx-auto px-8 max-w-6xl">
+    <Section id="faq" className="bg-[#111111] text-white" aria-labelledby="faq-title">
+      <Container className="max-w-6xl">
         <div className="mb-16 text-center">
             <p className="font-semibold text-sm uppercase tracking-[1.5px] mb-4" style={{
                 background: 'linear-gradient(90deg, #ff7a18, #af002d 70%, #319197)',
@@ -54,7 +56,7 @@ export default function FaqSection() {
           <FaqColumn items={firstHalf} />
           <FaqColumn items={secondHalf} />
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

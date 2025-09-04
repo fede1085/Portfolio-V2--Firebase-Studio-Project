@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
 
 export default function AboutSection() {
   return (
-    <section id="about-me" className="py-20 lg:py-32" aria-labelledby="about-me-title">
-      <div className="container mx-auto px-8">
+    <Section id="about-me" aria-labelledby="about-me-title">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="about__content-left">
             <p className="font-semibold text-sm uppercase tracking-[1.5px] mb-4" style={{
@@ -100,7 +102,7 @@ export default function AboutSection() {
                 data-ai-hint="team collaboration"
             />
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }
