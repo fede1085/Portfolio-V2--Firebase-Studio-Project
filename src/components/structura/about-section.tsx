@@ -31,7 +31,7 @@ export default function AboutSection() {
                     alt="A tall phone screen showing a wallet app"
                     width={300}
                     height={620}
-                    className="w-full h-full object-cover rounded-lg shadow-lg"
+                    className="portfolio-image"
                     data-ai-hint="building automations"
                 />
             </div>
@@ -41,7 +41,7 @@ export default function AboutSection() {
                     alt="A designer working at a dual monitor setup"
                     width={600}
                     height={620}
-                    className="w-full h-full object-cover rounded-lg shadow-lg"
+                    className="portfolio-image"
                     data-ai-hint="workspace setup"
                 />
             </div>
@@ -51,7 +51,7 @@ export default function AboutSection() {
                     alt="A workspace with a laptop"
                     width={300}
                     height={310}
-                    className="w-full h-full object-cover rounded-lg shadow-lg"
+                    className="portfolio-image"
                     data-ai-hint="training session"
                 />
                  <Image
@@ -59,7 +59,7 @@ export default function AboutSection() {
                     alt="Two people collaborating over a laptop"
                     width={300}
                     height={310}
-                    className="w-full h-full object-cover rounded-lg shadow-lg"
+                    className="portfolio-image"
                     data-ai-hint="team collaboration"
                 />
             </div>
