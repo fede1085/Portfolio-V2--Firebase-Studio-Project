@@ -1,5 +1,3 @@
-"use client";
-
 import { faqs as mockFaqs } from "@/lib/data";
 import {
   Accordion,

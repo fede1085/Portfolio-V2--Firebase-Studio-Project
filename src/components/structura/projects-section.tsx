@@ -1,4 +1,3 @@
-"use client"
 import Link from "next/link";
 import { projects as mockProjects } from "@/lib/data";
 import ProjectCard from "./project-card";
@@ -10,7 +9,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 export default function ProjectsSection() {
   const projects = mockProjects;
@@ -33,12 +31,6 @@ export default function ProjectsSection() {
         
       <div className="pl-8 lg:pl-0 lg:container lg:mx-auto lg:px-8 relative">
         <Carousel
-            plugins={[
-              Autoplay({
-                delay: 3000,
-                stopOnInteraction: true,
-              }),
-            ]}
             opts={{
               align: "start",
               loop: true,
