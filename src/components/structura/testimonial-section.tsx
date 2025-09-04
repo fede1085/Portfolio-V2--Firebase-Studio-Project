@@ -9,13 +9,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
 
 export default function TestimonialSection() {
   const testimonials = mockTestimonials;
 
   return (
-    <section id="testimonial" className="py-20 lg:py-32" aria-labelledby="testimonial-title">
-      <div className="container mx-auto px-8">
+    <Section id="testimonial" aria-labelledby="testimonial-title">
+      <Container>
         <div className="mb-12 max-w-2xl">
             <p className="text-accent font-semibold mb-2">TESTIMONIALS</p>
             <h2 id="testimonial-title" className="text-3xl lg:text-4xl font-bold">
@@ -64,7 +66,7 @@ export default function TestimonialSection() {
             <CarouselNext variant="outline" size="icon" className="static" />
           </div>
         </Carousel>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

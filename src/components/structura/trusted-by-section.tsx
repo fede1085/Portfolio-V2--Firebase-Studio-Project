@@ -1,15 +1,17 @@
 import Image from 'next/image';
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
 
 const tools = [
-  'ChatGPT', 'Gemini', 'n8n', 'Zapier', 'Make', 'Google Stitch', 
-  'Firebase', 'Microsoft 365', 'Google Workspace', 'AppSheet', 
+  'ChatGPT', 'Gemini', 'n8n', 'Zapier', 'Make', 'Google Stitch',
+  'Firebase', 'Microsoft 365', 'Google Workspace', 'AppSheet',
   'Power Automate', 'NotebookLM'
 ];
 
 export default function TrustedBySection() {
   return (
-    <section className="py-[60px] bg-background">
-      <div className="container mx-auto px-8">
+    <Section className="py-[60px] lg:py-[60px] bg-background">
+      <Container>
         <h2 className="text-center text-base font-normal tracking-[0.5px] text-black mb-10">
           Tools I Use
         </h2>
@@ -20,7 +22,7 @@ export default function TrustedBySection() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

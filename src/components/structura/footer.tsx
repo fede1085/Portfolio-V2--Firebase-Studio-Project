@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Dribbble, Instagram, Twitter } from "lucide-react";
+import { Container } from "@/components/ui/container";
 
 export default function Footer() {
   const socialLinks = [
@@ -23,7 +24,7 @@ export default function Footer() {
 
   return (
     <footer id="site-footer" className="bg-black text-white">
-      <div className="container mx-auto px-8 py-20">
+      <Container className="py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="footer-brand md:col-span-5">
             <Link href="/" className="text-2xl font-bold mb-4 block">
@@ -61,7 +62,7 @@ export default function Footer() {
                 </p>
             </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

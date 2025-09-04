@@ -1,3 +1,6 @@
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
+
 export default function ServicesSection() {
   const services = [
     {
@@ -36,8 +39,8 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-32" aria-labelledby="services-title">
-      <div className="container mx-auto px-8">
+    <Section id="services" aria-labelledby="services-title">
+      <Container>
         <div className="text-center mb-12 max-w-3xl mx-auto">
             <p className="text-accent font-semibold mb-2">SERVICES</p>
           <h2 id="services-title" className="text-3xl lg:text-4xl font-bold mb-4">
@@ -59,7 +62,7 @@ export default function ServicesSection() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

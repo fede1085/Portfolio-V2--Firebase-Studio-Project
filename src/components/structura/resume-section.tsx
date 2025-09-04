@@ -2,6 +2,8 @@ import { resume as mockResume } from "@/lib/data";
 import { Briefcase, GraduationCap, ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { Section } from "@/components/ui/section";
+import { Container } from "@/components/ui/container";
 
 interface ResumeItemProps {
   title: string;
@@ -46,8 +48,8 @@ export default function ResumeSection() {
   ]
 
   return (
-    <section id="resume" className="py-20 lg:py-32" aria-labelledby="resume-title">
-      <div className="container mx-auto px-8">
+    <Section id="resume" aria-labelledby="resume-title">
+      <Container>
         <div className="mb-12 max-w-2xl">
              <p className="text-accent font-semibold mb-2">EXPERIENCE</p>
             <h2 id="resume-title" className="text-3xl lg:text-4xl font-bold">
@@ -83,7 +85,7 @@ export default function ResumeSection() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }
