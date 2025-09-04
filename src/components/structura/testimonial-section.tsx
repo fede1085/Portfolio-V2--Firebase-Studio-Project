@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { testimonials as mockTestimonials } from "@/lib/data";
 import {
